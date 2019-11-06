@@ -1,0 +1,152 @@
+INSERT INTO bmdb.meta_app_type (id, code, title) VALUES
+(1, 'APP001', 'User App'),
+(2, 'APP002', 'Operator App');
+
+INSERT INTO bmdb.meta_country (id, code, country, timezone) VALUES
+(1, '+92', 'Pakistan', 'UTC+05:00'),
+(2, '+966', 'Saudi Arabia', 'UTC+03:00'),
+(3, '+1', 'Canada', 'UTC-04:00');
+
+INSERT INTO bmdb.meta_currency (id, code, symbol, title) VALUES
+(1, 'CUR001', 'SR', 'SAR'),
+(2, 'CUR002', 'Rs', 'PKR');
+
+INSERT INTO bmdb.meta_day (id, code) VALUES
+(1, 'Fri'),
+(2, 'Sat'),
+(3, 'Sun'),
+(4, 'Mon'),
+(5, 'Tue'),
+(6, 'Wed'),
+(7, 'Thurs');
+
+INSERT INTO bmdb.meta_language (id, code, title) VALUES
+(1, 'LAN001', 'English'),
+(2, 'LAN002', 'العربي');
+
+INSERT INTO bmdb.meta_day_language (id, title, fk_language, fk_opening_day) VALUES
+(1, 'Monday', 1, 4),
+(2, 'Monday', 2, 4),
+(3, 'Tuesday', 1, 5),
+(4, 'Tuesday', 2, 5),
+(5, 'Wednesday', 1, 6),
+(6, 'Wednesday', 2, 6),
+(7, 'Thursday', 1, 7),
+(8, 'Thursday', 2, 7),
+(9, 'Friday', 1, 1),
+(10, 'Friday', 2, 1),
+(11, 'Saturday', 1, 2),
+(12, 'Saturday', 2, 2),
+(13, 'Sunday', 1, 3),
+(14, 'Sunday', 2, 3);
+
+INSERT INTO bmdb.meta_message (id, code) VALUES
+(1, 'MSG001'),
+(2, 'MSG002'),
+(3, 'MSG003'),
+(4, 'MSG004'),
+(5, 'MSG005'),
+(6, 'MSG006'),
+(7, 'MSG007'),
+(8, 'MSG008'),
+(9, 'MSG009'),
+(10, 'MSG010'),
+(11, 'MSG501'),
+(12, 'MSG502'),
+(13, 'MSG011'),
+(14, 'MSG012'),
+(15, 'MSG013'),
+(16, 'MSG014'),
+(17, 'MSG015');
+
+INSERT INTO bmdb.meta_message_language (id, title, fk_language, fk_message) VALUES
+(1, 'success', 1, 1),
+(2, 'success', 2, 1),
+(3, 'invalid username', 1, 2),
+(4, 'invalid username', 2, 2),
+(5, 'invalid password', 1, 3),
+(6, 'invalid password', 2, 3),
+(7, 'invalid session', 1, 4),
+(8, 'invalid session', 2, 4),
+(9, 'invalid phone', 1, 5),
+(10, 'invalid phone', 2, 5),
+(11, 'user disabled', 1, 6),
+(12, 'user disabled', 2, 6),
+(13, 'error sending sms', 1, 7),
+(14, 'error sending sms', 2, 7),
+(15, 'invalid branch', 1, 8),
+(16, 'invalid branch', 2, 8),
+(17, 'invalid order', 1, 9),
+(18, 'invalid order', 2, 9),
+(19, 'order cannot be canceled because of status: ', 1, 10),
+(20, 'order cannot be canceled because of status: ', 2, 10),
+(22, 'COMBOS', 1, 11),
+(23, 'COMBOS', 2, 11),
+(24, 'SPECIALS', 1, 12),
+(25, 'SPECIALS', 2, 12),
+(26, 'Swift Orders - New Message', 1, 13),
+(27, 'Swift Orders - New Message', 2, 13),
+(28, 'Item Unavailable: ', 1, 14),
+(29, ' :Item Unavailable:', 2, 14),
+(30, 'Combo Unavailable: ', 1, 15),
+(31, ' :Combo Unavailable', 2, 15),
+(32, 'Special Unavailable: ', 1, 16),
+(33, ' :Special Unavailable', 2, 16),
+(34, 'Customer has arrived', 1, 17),
+(35, 'Customer has arrived', 2, 17);
+
+INSERT INTO bmdb.meta_rating (id, code) VALUES
+(1, 'RAT001'),
+(2, 'RAT002'),
+(3, 'RAT003'),
+(4, 'RAT004'),
+(5, 'RAT005');
+
+INSERT INTO bmdb.meta_rating_language (id, title, fk_language, fk_rating) VALUES
+(1, 'Very Poor', 1, 1),
+(2, 'Very Poor', 2, 1),
+(3, 'Poor', 1, 2),
+(4, 'Poor', 2, 2),
+(5, 'Average', 1, 3),
+(6, 'Average', 2, 3),
+(7, 'Good', 1, 4),
+(8, 'Good', 2, 4),
+(9, 'Excellent', 1, 5),
+(10, 'Excellent', 2, 5);
+
+INSERT INTO bmdb.meta_status (id, code) VALUES
+(1, 'STA001'),
+(2, 'STA002'),
+(3, 'STA003'),
+(4, 'STA004'),
+(5, 'STA101'),
+(6, 'STA102'),
+(7, 'STA103'),
+(8, 'STA104'),
+(9, 'STA105');
+
+INSERT INTO bmdb.meta_status_language (id, title, fk_language, fk_status, text) VALUES
+(1, 'Online', 1, 1, 'Online'),
+(2, 'Online', 2, 1, 'Online'),
+(3, 'Offline', 1, 2, 'Offline'),
+(4, 'Offline', 2, 2, 'Offline'),
+(5, 'Enabled', 1, 3, 'Enabled'),
+(6, 'Enabled', 2, 3, 'Enabled'),
+(7, 'Disabled', 1, 4, 'Disabled'),
+(8, 'Disabled', 2, 4, 'Disabled'),
+(9, 'New', 1, 5, 'Start'),
+(10, 'New', 2, 5, 'Start'),
+(11, 'In-Progress', 1, 6, 'Finish'),
+(12, 'In-Progress', 2, 6, 'Finish'),
+(13, 'Ready', 1, 7, 'Delivered'),
+(14, 'Ready', 2, 7, 'Delivered'),
+(15, 'Delivered', 1, 8, 'Delivered'),
+(16, 'Delivered', 2, 8, 'Delivered'),
+(17, 'Canceled', 1, 9, 'Canceled'),
+(18, 'Canceled', 2, 9, 'Canceled');
+
+INSERT INTO `meta_user_type` (`id`, `code`, `title`) VALUES
+(1, 'UT000001', 'ADMIN'),
+(2, 'UT000002', 'OWNER'),
+(3, 'UT000003', 'OPERATOR');
+

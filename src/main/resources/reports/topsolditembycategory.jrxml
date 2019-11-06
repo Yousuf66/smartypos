@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="84feeac3-d1f7-4503-84bf-fc3fa153df55">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fk_item" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="fk_item"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_item"/>
+	</field>
+	<field name="occurance" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="occurance"/>
+	</field>
+	<field name="catname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="catname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="library_category_language"/>
+	</field>
+	<field name="itemname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="itemname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item_language"/>
+	</field>
+	<group name="fk_item">
+		<groupExpression><![CDATA[$F{fk_item}]]></groupExpression>
+	</group>
+	<group name="occurance">
+		<groupExpression><![CDATA[$F{occurance}]]></groupExpression>
+	</group>
+	<group name="catname">
+		<groupExpression><![CDATA[$F{catname}]]></groupExpression>
+	</group>
+	<group name="itemname">
+		<groupExpression><![CDATA[$F{itemname}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="200" height="50" uuid="a3824709-d245-4545-b738-6963c17c30b8"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Top Sold Items By Category:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="50" uuid="8cf48165-6a91-4a8b-ac9f-17c4b78ca244"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{catname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="560" splitType="Stretch">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="-10" y="30" width="550" height="500" uuid="a8890c03-a064-495e-9fb5-9433b1358149"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{catname}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{itemname}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{occurance}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot labelRotation="90.0"/>
+					<itemLabel/>
+					<categoryAxisFormat labelRotation="90.0">
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</columnHeader>
+</jasperReport>

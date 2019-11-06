@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_12" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4dd7bb52-6da1-4dbf-8811-f50d3c3417fb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="fk_order" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.label" value="fk_order"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fk_order"/>
+	</field>
+	<field name="A" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="A"/>
+	</field>
+	<field name="B" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="B"/>
+	</field>
+	<field name="C" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="C"/>
+	</field>
+	<field name="D" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="D"/>
+	</field>
+	<field name="E" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="E"/>
+	</field>
+	<field name="F" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="F"/>
+	</field>
+	<group name="fk_order">
+		<groupExpression><![CDATA[$F{fk_order}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="19" width="310" height="40" uuid="2f823d26-6b80-4079-b498-ee714f3b726a"/>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Orders Status]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+	
+		<band height="530" splitType="Stretch">
+			<multiAxisChart>
+				<chart evaluationTime="Report">
+					<reportElement x="20" y="20" width="524" height="510" uuid="029b7f61-ed4a-4b2a-bda6-d5d5c67c6b93"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<multiAxisPlot>
+					<plot/>
+					<axis>
+						<stackedBarChart>
+							<chart evaluationTime="Report">
+								<reportElement x="0" y="0" width="0" height="0" backcolor="#FFFFFF" uuid="d78c2f91-eb19-46ee-83e2-65c92aa91f6f"/>
+								<chartTitle color="#000000"/>
+								<chartSubtitle color="#000000"/>
+								<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+							</chart>
+							<categoryDataset>
+								<categorySeries>
+									<seriesExpression><![CDATA["Assigned - New"]]></seriesExpression>
+									<categoryExpression><![CDATA[$F{fk_order}]]></categoryExpression>
+									<valueExpression><![CDATA[$F{A}]]></valueExpression>
+								</categorySeries>
+							</categoryDataset>
+							<barPlot>
+								<plot/>
+								<itemLabel/>
+								<categoryAxisLabelExpression><![CDATA["Order Number"]]></categoryAxisLabelExpression>
+								<categoryAxisFormat>
+									<axisFormat/>
+								</categoryAxisFormat>
+								<valueAxisLabelExpression><![CDATA[$F{F}]]></valueAxisLabelExpression>
+								<valueAxisFormat>
+									<axisFormat/>
+								</valueAxisFormat>
+								<rangeAxisMinValueExpression><![CDATA[0]]></rangeAxisMinValueExpression>
+								<rangeAxisMaxValueExpression><![CDATA[$F{E}]]></rangeAxisMaxValueExpression>
+							</barPlot>
+						</stackedBarChart>
+					</axis>
+					<axis>
+						<stackedBarChart>
+							<chart evaluationTime="Report">
+								<reportElement x="0" y="0" width="0" height="0" backcolor="#FFFFFF" uuid="e87c889a-c22c-4f91-a838-d2f944a152fa"/>
+								<chartTitle color="#000000"/>
+								<chartSubtitle color="#000000"/>
+								<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+							</chart>
+							<categoryDataset>
+								<categorySeries>
+									<seriesExpression><![CDATA["InProgress - Assigned"]]></seriesExpression>
+									<categoryExpression><![CDATA[$F{fk_order}]]></categoryExpression>
+									<valueExpression><![CDATA[$F{B}]]></valueExpression>
+								</categorySeries>
+							</categoryDataset>
+							<barPlot>
+								<plot/>
+								<itemLabel/>
+								<categoryAxisFormat>
+									<axisFormat/>
+								</categoryAxisFormat>
+								<valueAxisFormat>
+									<axisFormat labelColor="#FFFFFF" tickLabelColor="#FFFFFF" axisLineColor="#FFFFFF"/>
+								</valueAxisFormat>
+								<rangeAxisMinValueExpression><![CDATA[0]]></rangeAxisMinValueExpression>
+								<rangeAxisMaxValueExpression><![CDATA[$F{E}]]></rangeAxisMaxValueExpression>
+							</barPlot>
+						</stackedBarChart>
+					</axis>
+					<axis>
+						<stackedBarChart>
+							<chart evaluationTime="Report">
+								<reportElement x="0" y="0" width="0" height="0" backcolor="#FFFFFF" uuid="4ba60d02-fd91-4cc2-b5bf-1d45c86af8c6"/>
+								<chartTitle color="#000000"/>
+								<chartSubtitle color="#000000"/>
+								<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+							</chart>
+							<categoryDataset>
+								<categorySeries>
+									<seriesExpression><![CDATA["Ready - InProgress"]]></seriesExpression>
+									<categoryExpression><![CDATA[$F{fk_order}]]></categoryExpression>
+									<valueExpression><![CDATA[$F{C}]]></valueExpression>
+								</categorySeries>
+							</categoryDataset>
+							<barPlot>
+								<plot/>
+								<itemLabel/>
+								<categoryAxisFormat>
+									<axisFormat/>
+								</categoryAxisFormat>
+								<valueAxisFormat>
+									<axisFormat labelColor="#FFFFFF" tickLabelColor="#FFFFFF" verticalTickLabels="false" axisLineColor="#FFFFFF"/>
+								</valueAxisFormat>
+								<rangeAxisMinValueExpression><![CDATA[0]]></rangeAxisMinValueExpression>
+								<rangeAxisMaxValueExpression><![CDATA[$F{E}]]></rangeAxisMaxValueExpression>
+							</barPlot>
+						</stackedBarChart>
+					</axis>
+					<axis>
+						<stackedBarChart>
+							<chart evaluationTime="Report">
+								<reportElement x="0" y="0" width="0" height="0" backcolor="#FFFFFF" uuid="b937301d-637c-44d9-8111-4550a0723064"/>
+								<chartTitle color="#000000"/>
+								<chartSubtitle color="#000000"/>
+								<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+							</chart>
+							<categoryDataset>
+								<categorySeries>
+									<seriesExpression><![CDATA["Delivered - Ready"]]></seriesExpression>
+									<categoryExpression><![CDATA[$F{fk_order}]]></categoryExpression>
+									<valueExpression><![CDATA[$F{D}]]></valueExpression>
+								</categorySeries>
+							</categoryDataset>
+							<barPlot>
+								<plot/>
+								<itemLabel/>
+								<categoryAxisFormat>
+									<axisFormat tickLabelColor="#000000"/>
+								</categoryAxisFormat>
+								<valueAxisFormat>
+									<axisFormat tickLabelColor="#FFFFFF" axisLineColor="#FFFFFF"/>
+								</valueAxisFormat>
+								<rangeAxisMinValueExpression><![CDATA[0]]></rangeAxisMinValueExpression>
+								<rangeAxisMaxValueExpression><![CDATA[$F{E}]]></rangeAxisMaxValueExpression>
+							</barPlot>
+						</stackedBarChart>
+					</axis>
+				</multiAxisPlot>
+			</multiAxisChart>
+		</band>
+	
+	</columnHeader>
+</jasperReport>
