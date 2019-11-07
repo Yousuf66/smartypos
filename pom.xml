@@ -26,6 +26,18 @@
 	</properties>
 
 	<dependencies>
+	<!-- Added for heroku -->
+		<dependency>
+		<groupId><groupId></groupId>
+		<artifactId><some dependency></artifactId>
+		<version><version></version>
+		<exclusions>
+		    <exclusion>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		    </exclusion>
+		</exclusions>
+		
 		<!-- Add typical dependencies for a web application -->
 		<dependency>
 			<groupId>taglibs</groupId>
