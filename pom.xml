@@ -29,6 +29,7 @@
 			<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
+				<scope>provided</scope>
 			</dependency>
 		
 		<!-- Add typical dependencies for a web application -->
@@ -62,6 +63,7 @@
 		<dependency>
 			<groupId>javax.servlet.jsp.jstl</groupId>
 			<artifactId>javax.servlet.jsp.jstl-api</artifactId>
+			<scope>provided</scope>
 			<version>1.2.1</version>
 		</dependency>
 		<!-- 	
@@ -155,6 +157,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
