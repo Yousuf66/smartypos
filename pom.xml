@@ -6,7 +6,7 @@
 
 	<groupId>ksa.so</groupId>
 	<artifactId>ROOT</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>db</name>
 	<description>Spring Boot</description>
