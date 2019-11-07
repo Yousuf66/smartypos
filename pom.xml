@@ -26,6 +26,11 @@
 	</properties>
 
 	<dependencies>
+			<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			</dependency>
+		
 		<!-- Add typical dependencies for a web application -->
 		<dependency>
 			<groupId>taglibs</groupId>
@@ -36,6 +41,9 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
+		
+			
+		
 		<dependency>
 			<!-- Starter for using Spring Security -->
 			<groupId>org.springframework.boot</groupId>
