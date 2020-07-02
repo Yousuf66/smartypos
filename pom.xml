@@ -120,7 +120,7 @@
 					<artifactId>protobuf-java</artifactId>
 				</exclusion>
 			</exclusions>
-			<version>8.0.12</version>
+			<version>8.0.16</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
